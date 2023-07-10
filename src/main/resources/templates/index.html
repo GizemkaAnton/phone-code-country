@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>Get country by phone number</title>
+</head>
+<body>
+<div align="center">
+    <h3>Determination of the country by phone number</h3>
+    <br />
+    <form action="#" th:action="@{/get-country}" th:object="${phone_number}"
+          method="post">
+
+        <table border="0" cellpadding="10">
+            <tr>
+                <td>Phone number:</td>
+                <td><input type="text" th:field="*{number}"/></td>
+            </tr>
+            <tr>
+                <p th:if="${#fields.hasErrors('number')}" th:errors="*{number}">Name error</p>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Define country</button> </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

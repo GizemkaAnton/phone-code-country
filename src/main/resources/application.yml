@@ -1,0 +1,22 @@
+server:
+  port: 8088
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/code_country_db
+    username: user
+    password: password
+    hikari:
+      schema: public
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+message:
+  country_not_exist: "There is no country with this phone number"
+
+
+url:
+  wiki_table: "https://en.wikipedia.org/wiki/List_of_country_calling_codes"

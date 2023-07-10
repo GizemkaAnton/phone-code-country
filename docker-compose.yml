@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  postgres:
+    image: postgres:13.3
+    environment:
+      POSTGRES_DB: "code_country_db"
+      POSTGRES_USER: "user"
+      POSTGRES_PASSWORD: "password"
+    ports:
+      - "5432:5432"
